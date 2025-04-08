@@ -1,0 +1,87 @@
+.ReactModal__Content {
+    max-height: 600px; /* 세로 최대 높이 제한 */
+    overflow-y: auto; /* 내용이 넘치면 스크롤 */
+  }
+
+
+/* 전체 모달 폼 */
+.diet-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* 제목 입력 */
+  .diet-modal-form input[type="text"] {
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  /* 텍스트에어리어 */
+  .diet-modal-form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+  }
+  
+  /* 사진 업로드 버튼 */
+  .diet-upload-label {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+  }
+  
+  .diet-upload-label:hover {
+    background: #ddd;
+  }
+  
+  /* 미리보기 이미지 */
+  .diet-preview-image {
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  
+  button{
+    margin-left: 10px;
+
+  }
+  /* 버튼들 */
+  .diet-modal-buttons {
+    display: flex;
+    justify-content: flex-end; /* 👈 오른쪽 정렬 */
+    margin-top: 15px;
+  }
+  
+  .diet-modal-buttons button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .diet-modal-buttons button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .diet-modal-buttons .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .diet-modal-buttons .cancel-btn {
+    background-color: #aaa;
+    color: white;
+  }
+  

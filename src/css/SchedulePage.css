@@ -1,0 +1,89 @@
+/* 전체 배경을 위한 레이아웃 */
+.schedule-page {
+    min-height: 100vh;
+    padding: 100px 20px;
+    background-image: url('../images/hero.jpg'); /* ✅ 공지사항과 동일한 배경 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* 카드처럼 내용 박스 */
+  .schedule-card {
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 제목 */
+  .schedule-card h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* react-big-calendar 커스터마이징 */
+  .rbc-calendar {
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fefefe;
+  }
+  
+  .rbc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .rbc-event {
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    padding: 2px 4px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .rbc-today {
+    background-color: #fff5e1 !important;
+  }
+  
+  .rbc-selected {
+    background-color: #ffd8b1 !important;
+  }
+  
+  /* 일정 추가 버튼 */
+  .add-schedule-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #8b5c33;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .add-schedule-btn:hover {
+    background-color: #754424;
+  }
+
+  .rbc-agenda-view table {
+    font-size: 14px;
+  }
+  
+  .rbc-agenda-time-cell {
+    color: #555;
+  }  

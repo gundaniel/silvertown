@@ -1,0 +1,101 @@
+.notice-wrapper {
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.notice-card {
+  background: rgba(255, 255, 255, 0.95);
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.notice-card h2 {
+  text-align: center;
+  margin-bottom: 36px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+}
+
+.notice-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.notice-tab {
+  padding: 12px 36px;
+  font-size: 16px;
+  border-radius: 30px 0 0 30px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: background 0.3s;
+}
+
+.notice-tab + .notice-tab {
+  border-radius: 0 30px 30px 0;
+}
+
+.notice-tab.active {
+  background-color: #8b5c33;
+  color: white;
+}
+
+.notice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notice-table th,
+.notice-table td {
+  padding: 18px 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+  text-align: center;
+}
+
+.notice-table th {
+  background-color: #f5f5f5;
+  color: #444;
+  font-weight: bold;
+}
+
+.notice-table td a {
+  color: #333;
+  text-decoration: none;
+}
+
+.notice-table td a:hover {
+  text-decoration: underline;
+}
+
+.write-notice-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: #8b5c33;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.write-notice-btn:hover {
+  background-color: #754424;
+}

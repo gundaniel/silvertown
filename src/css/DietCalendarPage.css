@@ -1,0 +1,129 @@
+.diet-wrapper{
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 100px 0;
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.diet-calendar-container {
+    border-radius: 15px;
+    background-color: white;
+    padding: 30px;
+    max-width: 1100px; /* 📌 더 넓게 */
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .diet-calendar-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: 350px;
+    text-align: center;
+
+  }
+  
+  .diet-calendar-selects {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .diet-calendar-week-buttons {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+  }
+
+  .diet-calendar-selects,
+.diet-calendar-week-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* ✅ 버튼들도 가운데 정렬 */
+  flex-wrap: wrap;
+}
+  
+  .week-button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .week-button.active {
+    background-color: #333;
+    color: white;
+  }
+  
+  .diet-day-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ 한 줄에 3개씩 */
+    gap: 20px;
+    width: 650px;
+    margin: 20px auto 0;
+  }
+  
+  /* 각 카드 */
+  .diet-day-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    min-height: 140px;
+    background-color: #fff;
+  }
+  
+  .diet-day-card:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .diet-menu {
+    margin-top: 8px;
+    white-space: pre-line;
+    color: #333;
+  }
+  
+  .diet-menu.empty {
+    color: #aaa;
+  }
+  
+  .diet-photo-icon {
+    margin-top: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: right;
+  }
+  .diet-photo-icon:hover {
+    opacity: 0.8;
+  }
+
+  .diet-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .pdf-download-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .pdf-download-btn:hover {
+    background-color: #45a049;
+  }

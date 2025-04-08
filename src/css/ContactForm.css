@@ -1,0 +1,380 @@
+.section3 {
+  position: relative;
+  background-image: url('../images/main3.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 28px;
+  height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+ 
+.main-section {
+  position: relative;
+  color: white;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 60px;
+  border-radius: 12px;
+}
+
+.hero-overlay h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.mainP{
+  color: white;
+}
+
+.hero-overlay button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.section2 {
+  background-color: #3e4a61;
+  color: white;   
+}
+
+.section2 h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  
+}
+
+.card-section-wrapper {
+  background: rgba(0, 0, 0, 0.4); /* 반투명 박스 */
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap; 
+  max-width: 1800px;
+  height: 500px; 
+  padding: 20px;
+  overflow: visible;
+  position: relative;
+}
+
+.service-card {
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  width: 280px;
+  padding: 20px;
+  height: 400px; 
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* 카드 페이드인 기본 설정 */
+.service-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* 순서별로 지연 시간 적용 */
+.service-card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+/* 실제 애니메이션 정의 */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vertical-label {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #b06f2a;
+  color: white;
+  writing-mode: vertical-rl; /* ✅ 세로 텍스트 */
+  text-orientation: mixed;
+  padding: 10px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 2;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.85);
+  color: #ddd;
+  font-size: 13px;
+  text-align: center;
+  padding: 12px 10px;
+  z-index: 999; /* Header보다 낮게, 섹션보다 위로 */
+}
+
+.footer-fixed a {
+  color: #ccc;
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+.footer-fixed a:hover {
+  text-decoration: underline;
+}
+
+.contact-section {
+  position: relative; /* ✅ 푸터를 section 안에서 제어 가능하게 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 150px; /* ✅ footer 올라올 공간 확보 */
+}
+
+.section3-overlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+   z-index: 1;
+}
+
+.section3-left, .section3-right {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.section3-left {
+  background-color: rgba(255, 255, 255, 0.85); /* ✅ 반투명 흰색 */
+}
+
+.section3-right {
+  color: white;
+  padding-left: 80px;
+}
+
+.section3-right h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.section3-right p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.side-button {
+  position: absolute;
+  bottom: 120px;
+  z-index: 10;
+}
+
+.side-button-left {
+  left: 79.9%;
+}
+
+.side-button-left button {
+  background-color: #333;
+  color: white;
+}
+
+.side-button-right {
+  right: 67.7%;
+}
+.side-button-right button {
+  background-color: rgba(255, 255, 255, 0.85); /* ✅ 반투명 흰색 */
+}
+
+.side-button button {
+  padding: 14px 28px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 170px;
+  height: 100px;
+}
+
+.side-button button:hover {
+  background-color: #7a7777f1;
+}
+
+.footer-slide-up {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  z-index: 1000;
+}
+
+.footer-slide-up.show {
+  transform: translateY(0%);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.modal-content h3 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+
+.modal-content input,
+.modal-content select {
+  width: 562px;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* textarea 크기 고정 */
+.modal-content textarea {
+  height: 120px;
+  font-size: 15px;
+}
+
+/* 체크박스 줄 정렬 */
+.modal-content .checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.modal-content label.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.modal-content label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.modal-content .checkbox {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px; /* ✅ 딱 붙게 */
+}
+
+.modal-content button {
+  background-color: #2c7be5;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-content button:hover {
+  background-color: #1b5fc1;
+}

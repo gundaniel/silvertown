@@ -1,0 +1,238 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center; /* ✅ 가운데 정렬 */
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 로고는 절대 위치로 좌측 고정 */
+  .logo {
+    position: absolute;
+    left: 40px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+  }
+
+
+  .logo a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  
+  /* nav-links는 가운데에 고정된 너비를 가짐 */
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    width: 600px; /* ✅ 메뉴 전체 너비 제한 */
+    justify-content: center;
+  }
+  
+  .menu-item {
+    position: relative;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 8px 12px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  
+  .menu-item a:hover {
+    color: #000;
+  }
+  
+  /* 밑줄 효과 */
+  .menu-item a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+  
+  .menu-item a:hover::after {
+    width: 100%;
+  }
+  
+  /* 드롭다운 메뉴 */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 8px 0;
+    z-index: 999;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* hover 시 드롭다운 노출 */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .auth-links {
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .auth-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .auth-links a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+  /* ✅ 절대 위치 로그인 버튼 */
+.login-fixed {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-fixed a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .login-fixed a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+  }
+ 
+  .logout-btn {
+    background: none;
+    border: none;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  .logout-btn:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .nav-link {
+    font-weight: 600 !important; ; /* ✅ 더 진하게 */
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    padding: 8px 12px;
+  }
+  
+  .nav-link:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+/* 👑 관리자 모드용 스타일        */
+
+/* 관리자 전용 헤더 배경과 텍스트 색상 */
+.main-header.admin-mode {
+  background-color: #8b5c33;
+  color: white;
+}
+
+/* 관리자 전용 로고 */
+.logo.admin-active {
+  color: white;
+}
+
+/* 관리자용 메뉴 텍스트 */
+.nav-links.admin-mode .menu-item a {
+  color: white;
+}
+
+.nav-links.admin-mode .menu-item a:hover {
+  color: #ffe0b2; /* 약간 밝은 베이지 느낌 */
+}
+
+.nav-links.admin-mode .menu-item a::after {
+  background-color: white;
+}
+
+/* 관리자용 로그아웃 버튼 */
+.login-fixed.admin-mode .logout-btn {
+  color: white;
+  font-weight: bold;
+}
+
+.login-fixed.admin-mode .logout-btn:hover {
+  color: #ffe0b2;
+  text-decoration: underline;
+}
+
+/* 관리자 메뉴 강조 (예: 현재 위치 표시용) */
+.admin-menu-highlight {
+  background-color: #a47143;
+  color: white !important;
+  border-radius: 6px;
+  padding: 4px 8px;
+}

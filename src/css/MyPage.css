@@ -1,0 +1,224 @@
+
+.mypage-container {
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 40px;
+  min-height: calc(100vh - 60px);
+}
+
+.mypage-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 0;
+}
+
+.mypage-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* 사이드바 */
+.mypage-sidebar {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease-in-out;
+}
+
+.user-profile {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.user-profile img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.user-profile h3 {
+  margin: 12px 0 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.user-profile p {
+  font-size: 13px;
+  color: #888;
+}
+
+.sidebar-menu {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.sidebar-menu li:hover {
+  background-color: #e6f0ff;
+  color: #2c7be5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+/* 메인 정보 영역 */
+.mypage-main {
+  flex: 1;
+}
+
+.info-box {
+  width: 700px;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  padding: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  
+}
+
+.info-box h4 {
+  margin: 0;
+  padding: 16px 20px;
+  background-color: #828a92;
+  color: white;
+  font-size: 16px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  
+}
+
+.info-box p,
+.info-box li {
+  padding: 10px 20px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid #dddddd;
+}
+
+.info-box ul {
+  padding: 0;
+  list-style: inside;
+}
+
+.info-box ul li:last-child,
+.info-box p:last-child {
+  border-bottom: none;
+}
+
+.withdraw-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.withdraw-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* 버튼 감싸는 div */
+.btn-box {
+  padding: 20px;
+  text-align: right;
+}
+
+/* 전체 컨테이너 패딩 줄이기 */
+.mypage-container {
+  padding: 80px 20px;
+}
+
+/* 사이드바 메뉴 글자 진하게, hover 좀 더 부드럽게 */
+.sidebar-menu li {
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 정보 섹션 박스 */
+.info-box {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* 메인 제목도 약간 간격 줄여서 고급스러움 강화 */
+.mypage-main h4 {
+  font-size: 17px;
+  letter-spacing: -0.3px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.modal-content textarea {
+  width: 90%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px 15px;
+  margin: 0 5px;
+}

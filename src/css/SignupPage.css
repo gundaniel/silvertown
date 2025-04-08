@@ -1,0 +1,110 @@
+.signup-page {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    margin-top: 50px;
+  }
+  
+  .signup-form {
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+   
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 15px; /* 폼 전체 기본 글씨 크기 */
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+  }
+  
+  .signup-form input::placeholder {
+    font-size: 15px;
+    color: #aaa;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .input-group input,
+  .input-group button {
+    height: 40px;
+    font-size: 15px;
+    padding: 0 12px;
+  }
+  
+  input {
+    flex: 1;
+  }
+  
+  button {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+  
+  .input-group button {
+    padding: 10px 12px;
+    height: 37px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .input-group button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  .valid {
+    color: green;
+    margin-top: 0;
+    font-size: 14px;
+  }
+  
+  .invalid {
+    color: red;
+    margin-top: 0;
+    font-size: 14px;
+  }
+  
+  .submitBtn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .info-message {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .error-message {
+    font-size: 14px;
+    color: red;
+  } 
+  

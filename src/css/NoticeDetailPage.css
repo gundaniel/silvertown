@@ -1,0 +1,355 @@
+.notice-detail-wrapper {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .notice-detail-card {
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .notice-detail-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #222;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+  }
+  
+  .notice-detail-meta {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .notice-detail-content {
+    line-height: 1.8;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .notice-detail-content p {
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+
+  .notice-content{
+    height: 300px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .notice-back-link {
+    margin-top: 40px;
+    text-align: right;
+  }
+  
+  .notice-back-link a {
+    color: #8b5c33;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .notice-back-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .comment-section {
+    margin-top: 60px;
+  }
+  
+  .comment-section h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .comment-list {
+    margin-bottom: 30px;
+  }
+  
+  .comment-item {
+    position: relative;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 1px solid #ddd;
+    width: 970px;
+    height: 70px;
+  }
+  
+  .comment-item strong {
+    color: #333;
+  }
+  
+  .comment-item span {
+    margin-left: 10px;
+    font-size: 13px;
+    color: #888;
+  }
+  
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .comment-form textarea {
+    width: 970px;
+    height: 80px;
+    resize: none;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: inherit;
+    color: #333;
+  }
+
+  .comment-form input{
+    width:100px;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    font-family: inherit;
+    color: #333;
+    align-self: flex-end;
+  }
+  
+  .comment-form textarea:disabled {
+    background: #eee;
+    color: #888;
+    cursor: not-allowed;
+  }
+  
+  .comment-form button {
+    align-self: flex-end;
+    padding: 8px 18px;
+    background-color: #8b5c33;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .comment-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .comment-buttons {
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+  }
+  
+  .comment-buttons button {
+    margin-left: 6px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .comment-buttons button:first-child {
+    background-color: #4caf50;
+    color: white;
+  }
+  .comment-buttons button:first-child:hover {
+    background-color: #45a049;
+  }
+  
+  .comment-buttons button:last-child {
+    background-color: #f44336;
+    color: white;
+  }
+  .comment-buttons button:last-child:hover {
+    background-color: #d32f2f;
+  }
+  
+  .comment-edit-textarea {
+    width: 100%;
+    height: 70px;
+    font-size: 0.95rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    margin-bottom: 40px; /* 아래 버튼 영역 확보 */
+    font-family: inherit;
+  }
+
+  .notice-admin-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .notice-admin-buttons button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .notice-admin-buttons .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+
+  /* 공지 수정 모달 */
+.notice-edit-modal {
+  width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  outline: none;
+}
+
+.notice-edit-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.notice-edit-textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.notice-edit-buttons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.notice-edit-buttons button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.notice-edit-buttons .save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.notice-edit-buttons .cancel-btn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* 모달 오버레이 - 어두운 배경 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* 반투명 검정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* 최상위에 위치하도록 */
+}
+
+/* 모달 컨텐츠 박스 */
+.edit-notice-modal {
+  background: white;
+  padding: 20px;
+  width: 500px;
+  max-width: 90%;
+  border-radius: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 입력창 */
+.edit-notice-modal input,
+.edit-notice-modal textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* 버튼 정렬 */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background-color: #4caf50;
+  color: white;
+}
+
+.modal-buttons button:last-child {
+  background-color: #ccc;
+}
+
+.notice-admin-buttons{
+  display: flex;
+  justify-content: flex-end; /* 👉 오른쪽 정렬 */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.edit-notice-modal input,
+.edit-notice-modal textarea {
+  width: 100%;
+  box-sizing: border-box; /* padding 포함해서 width 계산 */
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  resize: none;
+}

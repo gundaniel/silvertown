@@ -1,0 +1,32 @@
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8b5c33;
+    padding: 16px 32px;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .admin-logo {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .admin-nav a,
+  .admin-nav button {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .admin-nav button:hover,
+  .admin-nav a:hover {
+    text-decoration: underline;
+  }
+  
