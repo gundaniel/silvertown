@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ 이미 있음
 import fullpage from 'fullpage.js';
 import mainImage from '../images/hero.jpg';
 import main2Image from '../images/main2.jpg';
@@ -10,6 +11,7 @@ import ContactForm from '../components/ContactForm';
 import axios from 'axios';
 
 const MainPage = () => {
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [mainCategory, setMainCategory] = useState('');
   const [form, setForm] = useState({ name: '', phone: '', content: '', category: '' });
@@ -101,7 +103,7 @@ const MainPage = () => {
           <div className="hero-overlay">
             <h1>THE BEST CHOICE FOR SENIOR</h1>
             <p className="mainP">어르신들이 행복한 삶을 영위할 수 있도록 돕겠습니다.</p>
-            <button>사진보기 →</button>
+            <button onClick={() => navigate('/town/daily')}>사진보기 →</button>
           </div>
         </div>
  

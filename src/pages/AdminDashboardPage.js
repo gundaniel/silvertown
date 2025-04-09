@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ 추가
 import Header from '../components/Header';
 import UserChart from '../components/UserChart';
 import '../css/AdminDashboardPage.css';
 import axios from 'axios';
 
+
 const AdminDashboardPage = () => {
+  const navigate = useNavigate(); // ✅ 네비게이션 훅
   const [summary, setSummary] = useState({
     totalUsers: 0,
     todayUsers: 0,
@@ -20,8 +23,27 @@ const AdminDashboardPage = () => {
   const [activeModal, setActiveModal] = useState(null); // 'new', 'withdrawn', 'qna'
 
   useEffect(() => {
-    
+    const isAdmin = async () => {
+      try{
+      const res = await axios.get('http://localhost:8080/api/admin/check', {
+      withCredentials: true,
+    });
+
+    if (!res.data) {
+      alert("관리자만 접근 가능합니다.");
+      navigate('/'); // 또는 navigate('/login') 등
+      return;
+    }
+    fetchAll();
+  }
+    catch (error) {
+      alert("접근권한이 없습니다.");
+      navigate('/'); // 또는 navigate('/login') 등
+    }
+  };  
+
     const fetchAll = async () => {
+      try {
       const summary = await axios.get('http://localhost:8080/api/admin/users/statistics');
       const users = await axios.get('http://localhost:8080/api/admin/users');
       const withdrawn = await axios.get('http://localhost:8080/api/admin/users/withdrawn');
@@ -33,10 +55,14 @@ const AdminDashboardPage = () => {
       setWithdrawnUsers(withdrawn.data);
       setChartData(chart.data);
       setQnaList(qnas.data);
-    };
+    } catch (error) {
+      console.error('데이터 불러오기 실패:', error);
+      alert('서버 오류가 발생했습니다.');
+    }
+  };
 
-    fetchAll();
-  }, []);
+    isAdmin();
+  }, [navigate]);
 
   const closeModal = () => setActiveModal(null);
 
